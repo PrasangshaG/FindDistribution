@@ -1,9 +1,9 @@
 Package: FindDistribution
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Identify the Best Parametric Distribution for a Given Data Vector
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Author: Prasangsha Ganguly
+Maintainer: The package maintainer <prasangsha94ganguly@gmail.com>
 Description: Find the best distribution that fits a data vector
 License: GPL-2
 Encoding: UTF-8
