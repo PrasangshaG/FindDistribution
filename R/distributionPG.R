@@ -1399,7 +1399,7 @@ distributionPG <- function(t) {
                 stringweibull5, stringweibull6, stringweibull7, stringweibull8, stringweibull9,
                 stringweibull10, stringweibull11)
 
-  Pvalues = c(pvalunif, pvalpois, pvalexp, pvalnorm, pvalgam, pvalchi,
+  Probability = c(pvalunif, pvalpois, pvalexp, pvalnorm, pvalgam, pvalchi,
               pvalbeta, pvalweibull1, pvalweibull2, pvalweibull3, pvalweibull4,
               pvalweibull5, pvalweibull6, pvalweibull7, pvalweibull8, pvalweibull9,
               pvalweibull10, pvalweibull11)
@@ -1408,31 +1408,31 @@ distributionPG <- function(t) {
   ######### Domain checks ###########
   if(tp != TRUE || ti != TRUE)
   {
-    Pvalues[2] = 0 ##Poisson
+    Probability[2] = 0 ##Poisson
   }
 
   if(tp != TRUE)
   {
-    Pvalues[3] = 0  ### Exponential
-    Pvalues[5] = 0  #### Gamma
-    Pvalues[6] = 0  ### Chi
+    Probability[3] = 0  ### Exponential
+    Probability[5] = 0  #### Gamma
+    Probability[6] = 0  ### Chi
     for(i in 8:18)
     {
-      Pvalues[i] = 0  ### Weibulls
+      Probability[i] = 0  ### Weibulls
     }
   }
 
 
   if(tbeta != TRUE)
   {
-    Pvalues[7] = 0
+    Probability[7] = 0
   }
 
 
   ######## Result is a data frame #######
-  Result <- data.frame(Distrname, Pvalues)
+  Result <- data.frame(Distrname, Probability)
 
-  Result_sorted <- Result[order(-Pvalues),]
+  Result_sorted <- Result[order(-Probability),]
 
   print(Result_sorted)
 
