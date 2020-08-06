@@ -451,8 +451,8 @@ distributionPG <- function(t) {
     
     if(a <= 0 || b <= 0)
     {
-      a = 0.1
-      b = 0.1
+      a = 1
+      b = 1
     }
     
     quantbeta <- qbeta(p, a, b, ncp =0)
