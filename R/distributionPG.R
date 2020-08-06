@@ -1253,7 +1253,10 @@ distributionPG <- function(t) {
   
   
   ################   Test statistic & Pval Beta ################################
+  if(tbeta == TRUE)
+  {
   observedbeta <- checkbeta(dat,p, meanda, stdev)
+  
   cbeta = ((observedbeta[1] - expectedcell1)^2/expectedcell1 + (observedbeta[2] - expectedcell2)^2/expectedcell2
            + (observedbeta[3] - expectedcell3)^2/expectedcell3 + (observedbeta[4] - expectedcell4)^2/expectedcell4
            + (observedbeta[5] - expectedcell5)^2/expectedcell5)
@@ -1262,7 +1265,7 @@ distributionPG <- function(t) {
   alpha = observedbeta[6]
   beta = observedbeta[7]
   stringbeta <- paste("Beta(alpha=", alpha, ",beta =",  beta, ")")
-  
+  }
   
   
   ################   Test statistic & Pval Weibull1 ################################
