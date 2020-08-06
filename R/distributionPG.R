@@ -13,7 +13,7 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-distributionP <- function(t) {
+distributionPG <- function(t) {
   options(warn=-1)
   options("getSymbols.warning4.0"=FALSE)
   
